@@ -23,3 +23,99 @@ function calcAge(birthYear) {
 
 const firstName = 'Idris';
 calcAge(2000);
+
+// Hoisting with Variabls
+
+console.log(me);
+// console.log(year);
+// console.log(job);
+
+var me = 'Cloud';
+let year = 2000;
+const job = 'Web Developer';
+
+// Hoisting with Functions
+
+console.log(addDecl(2, 3));
+// console.log(addExpr(2, 3));
+// console.log(addArrow(2, 3));
+
+function addDecl(a, b) {
+  return a + b;
+}
+
+// const addExpr = function (a, b) {
+//   return a + b;
+// };
+
+const addArrow = (a, b) => {
+  return a + b;
+};
+
+if (!numProducts) deleteShoppingCart();
+
+var numProducts = 10;
+
+function deleteShoppingCart() {
+  console.log('All products deleted');
+}
+
+// the this keyword
+
+const idris = {
+  firstName: 'Idris',
+  lastName: 'Musa',
+  yearOfBirth: 2000,
+  calcAge: function () {
+    console.log(2024 - this.yearOfBirth);
+
+    const greet = () => {
+      console.log(`Hey ${this.firstName}`);
+    };
+    greet();
+  },
+};
+
+idris.calcAge();
+
+const sultan = {
+  yearOfBirth: 1999,
+};
+
+function main(input) {
+  const square = function (x) {
+    const multiplication = x * x;
+    return multiplication;
+  };
+
+  console.log(square(input));
+}
+
+main(5);
+
+const factorial = function (num) {
+  return num;
+};
+
+console.log(factorial(5));
+
+let firstAge = 30;
+let oldAge = firstAge;
+firstAge = 20;
+console.log(oldAge);
+console.log(firstAge);
+
+const little = {
+  name: 'Cloud',
+  age: 30,
+};
+
+const friend = little;
+friend.age = 31;
+friend.name = 'Musa';
+
+const newFriend = Object.assign(little, friend);
+
+console.log(little);
+console.log(friend);
+console.log(newFriend);
