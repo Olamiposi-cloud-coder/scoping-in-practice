@@ -114,6 +114,7 @@ const friend = little;
 friend.age = 31;
 friend.name = 'Musa';
 
+console.log(little.name);
 const newFriend = Object.assign(little, friend);
 
 console.log(little);
